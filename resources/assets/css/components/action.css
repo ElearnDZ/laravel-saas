@@ -1,0 +1,24 @@
+.action {
+    transition: all 0.15s ease-in;
+    @apply p-3 border-b border-grey-light;
+}
+
+.action:hover,
+.action:focus,
+.action:active {
+    @apply no-underline bg-grey-light;
+}
+
+.action:last-child {
+    @apply border-none
+}
+
+.action-danger {
+    @apply text-red;
+}
+
+.action-danger:hover,
+.action-danger:focus,
+.action-danger:active {
+    @apply bg-red text-white border-red;
+}

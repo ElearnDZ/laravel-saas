@@ -1,0 +1,11 @@
+a {
+    transition: color 0.15s ease-in;
+    @apply no-underline text-blue;
+}
+
+a:hover,
+a:focus,
+a:active {
+    outline: none;
+    @apply underline text-blue-darkest;
+}

@@ -1,0 +1,43 @@
+
+input,
+select,
+textarea {
+  outline: none;
+  transition: border-color 0.15s ease-in;
+  @apply p-2 border border-grey w-full;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  @apply border-black;
+}
+
+input:focus,
+input:active,
+select:focus,
+select:active,
+textarea:focus,
+textarea:active {
+  @apply border-blue;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    width: auto;
+}
+
+label.form-label {
+    @apply mb-1 mt-4 block text-sm font-bold;
+}
+
+label.checkbox-label,
+label.radio-label {
+    @apply text-sm;
+}
+
+.has-error input,
+.has-error select,
+.has-error textarea {
+  @apply border-red
+}

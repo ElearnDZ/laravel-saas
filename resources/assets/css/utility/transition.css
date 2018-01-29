@@ -1,0 +1,15 @@
+.transition-150 {
+  transition: all 0.15s ease-in;
+}
+
+.transition-300 {
+  transition: all 0.3s ease-in;
+}
+
+.transition-500 {
+  transition: all 0.5s ease-in;
+}
+
+.transition-1000 {
+  transition: all 1s ease-in;
+}

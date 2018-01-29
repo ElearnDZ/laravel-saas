@@ -13,11 +13,12 @@
         "axios": "^0.17",
         "cross-env": "^5.1",
         "laravel-mix": "^2.0",
+        "laravel-mix-purgecss": "^1.0.4",
         "lodash": "^4.17.4",
         "tailwindcss": "^0.4.1",
-        "vue": "^2.5.7",
-        "laravel-mix-purgecss": "^1.0.4"
+        "vue": "^2.5.7"
     },
     "dependencies": {
+        "postcss-import": "^11.0.0"
     }
 }

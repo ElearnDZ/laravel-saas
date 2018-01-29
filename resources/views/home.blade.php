@@ -1,23 +1,19 @@
 @extends('layouts.app')
+@section('view.class', 'center-all')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
+    <div class="container mx-auto">
+        @if (session('status'))
+            <div class="alert alert-success mx-auto mb-4">
+                {{ session('status') }}
             </div>
+        @endif
+
+        <div class="text-3xl leading-normal">
+            Your amazing app goes here.<br>
+            I can't help you with that. 🤓
         </div>
     </div>
+
 </div>
 @endsection

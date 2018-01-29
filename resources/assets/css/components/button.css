@@ -1,0 +1,11 @@
+.btn {
+    transition: background-color 0.15s ease-in;
+    @apply px-4 py-2 rounded border border-grey;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    outline: none;
+    @apply bg-grey;
+}

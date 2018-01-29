@@ -1,0 +1,11 @@
+.alert {
+    @apply block p-4 border border-grey text-sm font-normal;
+}
+
+.alert-danger {
+    @apply bg-red border-none text-white;
+}
+
+.alert-success {
+    @apply bg-green border-none text-white;
+}
