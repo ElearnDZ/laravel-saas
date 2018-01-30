@@ -674,6 +674,11 @@ textarea {
   border-width: 1px;
   border-color: #b8c2cc;
   width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+  background-color: #fff;
 }
 
 input:hover,
@@ -801,6 +806,11 @@ a:active {
   border-color: #e3342f;
 }
 
+.badge {
+  padding: 2px 4px;
+  font-size: 10px;
+}
+
 .center-all {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -815,6 +825,10 @@ a:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.text-2xs {
+  font-size: .5rem;
 }
 
 .transition-150 {

@@ -4,7 +4,7 @@ select,
 textarea {
   outline: none;
   transition: border-color 0.15s ease-in;
-  @apply p-2 border border-grey w-full;
+  @apply p-2 border border-grey w-full appearance-none rounded-none bg-white;
 }
 
 input:hover,

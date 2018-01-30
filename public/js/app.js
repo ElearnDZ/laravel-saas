@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 78);
+/******/ 	return __webpack_require__(__webpack_require__.s = 79);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -177,7 +177,7 @@ SafeBuffer.allocUnsafeSlow = function (size) {
 
 var base64 = __webpack_require__(106)
 var ieee754 = __webpack_require__(107)
-var isArray = __webpack_require__(45)
+var isArray = __webpack_require__(46)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -5402,7 +5402,7 @@ var elliptic = exports;
 
 elliptic.version = __webpack_require__(152).version;
 elliptic.utils = __webpack_require__(153);
-elliptic.rand = __webpack_require__(65);
+elliptic.rand = __webpack_require__(66);
 elliptic.curve = __webpack_require__(24);
 elliptic.curves = __webpack_require__(158);
 
@@ -5419,7 +5419,7 @@ elliptic.eddsa = __webpack_require__(170);
 
 
 var bind = __webpack_require__(39);
-var isBuffer = __webpack_require__(83);
+var isBuffer = __webpack_require__(84);
 
 /*global toString:true*/
 
@@ -6374,7 +6374,7 @@ var util = __webpack_require__(15);
 util.inherits = __webpack_require__(0);
 /*</replacement>*/
 
-var Readable = __webpack_require__(46);
+var Readable = __webpack_require__(47);
 var Writable = __webpack_require__(31);
 
 util.inherits(Duplex, Readable);
@@ -6883,7 +6883,7 @@ asn1.bignum = __webpack_require__(3);
 
 asn1.define = __webpack_require__(174).define;
 asn1.base = __webpack_require__(19);
-asn1.constants = __webpack_require__(71);
+asn1.constants = __webpack_require__(72);
 asn1.decoders = __webpack_require__(180);
 asn1.encoders = __webpack_require__(182);
 
@@ -6895,8 +6895,8 @@ asn1.encoders = __webpack_require__(182);
 var base = exports;
 
 base.Reporter = __webpack_require__(177).Reporter;
-base.DecoderBuffer = __webpack_require__(70).DecoderBuffer;
-base.EncoderBuffer = __webpack_require__(70).EncoderBuffer;
+base.DecoderBuffer = __webpack_require__(71).DecoderBuffer;
+base.EncoderBuffer = __webpack_require__(71).EncoderBuffer;
 base.Node = __webpack_require__(178);
 
 
@@ -7392,7 +7392,7 @@ curve.edwards = __webpack_require__(157);
 var aesid = __webpack_require__(185)
 var fixProc = __webpack_require__(186)
 var ciphers = __webpack_require__(34)
-var compat = __webpack_require__(54)
+var compat = __webpack_require__(55)
 module.exports = parseKeys
 
 function parseKeys (buffer) {
@@ -7505,7 +7505,7 @@ function decrypt (data, password) {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 var utils = __webpack_require__(5);
-var normalizeHeaderName = __webpack_require__(85);
+var normalizeHeaderName = __webpack_require__(86);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -8366,12 +8366,12 @@ function isUndefined(arg) {
 /* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(46);
+exports = module.exports = __webpack_require__(47);
 exports.Stream = exports;
 exports.Readable = exports;
 exports.Writable = __webpack_require__(31);
 exports.Duplex = __webpack_require__(11);
-exports.Transform = __webpack_require__(49);
+exports.Transform = __webpack_require__(50);
 exports.PassThrough = __webpack_require__(113);
 
 
@@ -8457,7 +8457,7 @@ var internalUtil = {
 /*</replacement>*/
 
 /*<replacement>*/
-var Stream = __webpack_require__(47);
+var Stream = __webpack_require__(48);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -8471,7 +8471,7 @@ function _isUint8Array(obj) {
 }
 /*</replacement>*/
 
-var destroyImpl = __webpack_require__(48);
+var destroyImpl = __webpack_require__(49);
 
 util.inherits(Writable, Stream);
 
@@ -9340,9 +9340,9 @@ var exports = module.exports = function SHA (algorithm) {
 exports.sha = __webpack_require__(118)
 exports.sha1 = __webpack_require__(119)
 exports.sha224 = __webpack_require__(120)
-exports.sha256 = __webpack_require__(50)
+exports.sha256 = __webpack_require__(51)
 exports.sha384 = __webpack_require__(121)
-exports.sha512 = __webpack_require__(51)
+exports.sha512 = __webpack_require__(52)
 
 
 /***/ }),
@@ -9351,7 +9351,7 @@ exports.sha512 = __webpack_require__(51)
 
 var ciphers = __webpack_require__(128)
 var deciphers = __webpack_require__(136)
-var modes = __webpack_require__(60)
+var modes = __webpack_require__(61)
 
 function getCiphers () {
   return Object.keys(modes)
@@ -9375,11 +9375,11 @@ var modeModules = {
   CFB8: __webpack_require__(132),
   CFB1: __webpack_require__(133),
   OFB: __webpack_require__(134),
-  CTR: __webpack_require__(58),
-  GCM: __webpack_require__(58)
+  CTR: __webpack_require__(59),
+  GCM: __webpack_require__(59)
 }
 
-var modes = __webpack_require__(60)
+var modes = __webpack_require__(61)
 
 for (var key in modes) {
   modes[key].module = modeModules[modes[key].mode]
@@ -9496,12 +9496,12 @@ module.exports = function bind(fn, thisArg) {
 
 
 var utils = __webpack_require__(5);
-var settle = __webpack_require__(86);
-var buildURL = __webpack_require__(88);
-var parseHeaders = __webpack_require__(89);
-var isURLSameOrigin = __webpack_require__(90);
+var settle = __webpack_require__(87);
+var buildURL = __webpack_require__(89);
+var parseHeaders = __webpack_require__(90);
+var isURLSameOrigin = __webpack_require__(91);
 var createError = __webpack_require__(41);
-var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(91);
+var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(92);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -9598,7 +9598,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(92);
+      var cookies = __webpack_require__(93);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -9682,7 +9682,7 @@ module.exports = function xhrAdapter(config) {
 "use strict";
 
 
-var enhanceError = __webpack_require__(87);
+var enhanceError = __webpack_require__(88);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -9792,7 +9792,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(101);
+__webpack_require__(102);
 // On some exotic environments, it's not clear which object `setimmeidate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -9809,6 +9809,115 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* 45 */
 /***/ (function(module, exports) {
 
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file.
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier /* server only */
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = injectStyles
+  }
+
+  if (hook) {
+    var functional = options.functional
+    var existing = functional
+      ? options.render
+      : options.beforeCreate
+
+    if (!functional) {
+      // inject component registration as beforeCreate hook
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    } else {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functioal component in vue file
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return existing(h, context)
+      }
+    }
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports) {
+
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
@@ -9817,7 +9926,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9852,7 +9961,7 @@ var processNextTick = __webpack_require__(21);
 module.exports = Readable;
 
 /*<replacement>*/
-var isArray = __webpack_require__(45);
+var isArray = __webpack_require__(46);
 /*</replacement>*/
 
 /*<replacement>*/
@@ -9870,7 +9979,7 @@ var EElistenerCount = function (emitter, type) {
 /*</replacement>*/
 
 /*<replacement>*/
-var Stream = __webpack_require__(47);
+var Stream = __webpack_require__(48);
 /*</replacement>*/
 
 // TODO(bmeurer): Change this back to const once hole checks are
@@ -9902,7 +10011,7 @@ if (debugUtil && debugUtil.debuglog) {
 /*</replacement>*/
 
 var BufferList = __webpack_require__(111);
-var destroyImpl = __webpack_require__(48);
+var destroyImpl = __webpack_require__(49);
 var StringDecoder;
 
 util.inherits(Readable, Stream);
@@ -10831,14 +10940,14 @@ function indexOf(xs, x) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(9)))
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(29).EventEmitter;
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10916,7 +11025,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11136,7 +11245,7 @@ function done(stream, er, data) {
 }
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -11277,7 +11386,7 @@ module.exports = Sha256
 
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var inherits = __webpack_require__(0)
@@ -11543,7 +11652,7 @@ module.exports = Sha512
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11612,23 +11721,23 @@ module.exports = function createHmac (alg, key) {
 
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports) {
 
 module.exports = {"sha224WithRSAEncryption":{"sign":"rsa","hash":"sha224","id":"302d300d06096086480165030402040500041c"},"RSA-SHA224":{"sign":"ecdsa/rsa","hash":"sha224","id":"302d300d06096086480165030402040500041c"},"sha256WithRSAEncryption":{"sign":"rsa","hash":"sha256","id":"3031300d060960864801650304020105000420"},"RSA-SHA256":{"sign":"ecdsa/rsa","hash":"sha256","id":"3031300d060960864801650304020105000420"},"sha384WithRSAEncryption":{"sign":"rsa","hash":"sha384","id":"3041300d060960864801650304020205000430"},"RSA-SHA384":{"sign":"ecdsa/rsa","hash":"sha384","id":"3041300d060960864801650304020205000430"},"sha512WithRSAEncryption":{"sign":"rsa","hash":"sha512","id":"3051300d060960864801650304020305000440"},"RSA-SHA512":{"sign":"ecdsa/rsa","hash":"sha512","id":"3051300d060960864801650304020305000440"},"RSA-SHA1":{"sign":"rsa","hash":"sha1","id":"3021300906052b0e03021a05000414"},"ecdsa-with-SHA1":{"sign":"ecdsa","hash":"sha1","id":""},"sha256":{"sign":"ecdsa","hash":"sha256","id":""},"sha224":{"sign":"ecdsa","hash":"sha224","id":""},"sha384":{"sign":"ecdsa","hash":"sha384","id":""},"sha512":{"sign":"ecdsa","hash":"sha512","id":""},"DSA-SHA":{"sign":"dsa","hash":"sha1","id":""},"DSA-SHA1":{"sign":"dsa","hash":"sha1","id":""},"DSA":{"sign":"dsa","hash":"sha1","id":""},"DSA-WITH-SHA224":{"sign":"dsa","hash":"sha224","id":""},"DSA-SHA224":{"sign":"dsa","hash":"sha224","id":""},"DSA-WITH-SHA256":{"sign":"dsa","hash":"sha256","id":""},"DSA-SHA256":{"sign":"dsa","hash":"sha256","id":""},"DSA-WITH-SHA384":{"sign":"dsa","hash":"sha384","id":""},"DSA-SHA384":{"sign":"dsa","hash":"sha384","id":""},"DSA-WITH-SHA512":{"sign":"dsa","hash":"sha512","id":""},"DSA-SHA512":{"sign":"dsa","hash":"sha512","id":""},"DSA-RIPEMD160":{"sign":"dsa","hash":"rmd160","id":""},"ripemd160WithRSA":{"sign":"rsa","hash":"rmd160","id":"3021300906052b2403020105000414"},"RSA-RIPEMD160":{"sign":"rsa","hash":"rmd160","id":"3021300906052b2403020105000414"},"md5WithRSAEncryption":{"sign":"rsa","hash":"md5","id":"3020300c06082a864886f70d020505000410"},"RSA-MD5":{"sign":"rsa","hash":"md5","id":"3020300c06082a864886f70d020505000410"}}
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 exports.pbkdf2 = __webpack_require__(124)
 
-exports.pbkdf2Sync = __webpack_require__(57)
+exports.pbkdf2Sync = __webpack_require__(58)
 
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports) {
 
 var MAX_ALLOC = Math.pow(2, 30) - 1 // default in iojs
@@ -11652,7 +11761,7 @@ module.exports = function (iterations, keylen) {
 
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {var defaultEncoding
@@ -11669,15 +11778,15 @@ module.exports = defaultEncoding
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var md5 = __webpack_require__(27)
 var rmd160 = __webpack_require__(28)
 var sha = __webpack_require__(33)
 
-var checkParameters = __webpack_require__(55)
-var defaultEncoding = __webpack_require__(56)
+var checkParameters = __webpack_require__(56)
+var defaultEncoding = __webpack_require__(57)
 var Buffer = __webpack_require__(1).Buffer
 var ZEROS = Buffer.alloc(128)
 var sizes = {
@@ -11776,12 +11885,12 @@ module.exports = pbkdf2
 
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var xor = __webpack_require__(16)
 var Buffer = __webpack_require__(1).Buffer
-var incr32 = __webpack_require__(59)
+var incr32 = __webpack_require__(60)
 
 function getBlock (self) {
   var out = self._cipher.encryptBlockRaw(self._prev)
@@ -11812,7 +11921,7 @@ exports.encrypt = function (self, chunk) {
 
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, exports) {
 
 function incr32 (iv) {
@@ -11833,13 +11942,13 @@ module.exports = incr32
 
 
 /***/ }),
-/* 60 */
+/* 61 */
 /***/ (function(module, exports) {
 
 module.exports = {"aes-128-ecb":{"cipher":"AES","key":128,"iv":0,"mode":"ECB","type":"block"},"aes-192-ecb":{"cipher":"AES","key":192,"iv":0,"mode":"ECB","type":"block"},"aes-256-ecb":{"cipher":"AES","key":256,"iv":0,"mode":"ECB","type":"block"},"aes-128-cbc":{"cipher":"AES","key":128,"iv":16,"mode":"CBC","type":"block"},"aes-192-cbc":{"cipher":"AES","key":192,"iv":16,"mode":"CBC","type":"block"},"aes-256-cbc":{"cipher":"AES","key":256,"iv":16,"mode":"CBC","type":"block"},"aes128":{"cipher":"AES","key":128,"iv":16,"mode":"CBC","type":"block"},"aes192":{"cipher":"AES","key":192,"iv":16,"mode":"CBC","type":"block"},"aes256":{"cipher":"AES","key":256,"iv":16,"mode":"CBC","type":"block"},"aes-128-cfb":{"cipher":"AES","key":128,"iv":16,"mode":"CFB","type":"stream"},"aes-192-cfb":{"cipher":"AES","key":192,"iv":16,"mode":"CFB","type":"stream"},"aes-256-cfb":{"cipher":"AES","key":256,"iv":16,"mode":"CFB","type":"stream"},"aes-128-cfb8":{"cipher":"AES","key":128,"iv":16,"mode":"CFB8","type":"stream"},"aes-192-cfb8":{"cipher":"AES","key":192,"iv":16,"mode":"CFB8","type":"stream"},"aes-256-cfb8":{"cipher":"AES","key":256,"iv":16,"mode":"CFB8","type":"stream"},"aes-128-cfb1":{"cipher":"AES","key":128,"iv":16,"mode":"CFB1","type":"stream"},"aes-192-cfb1":{"cipher":"AES","key":192,"iv":16,"mode":"CFB1","type":"stream"},"aes-256-cfb1":{"cipher":"AES","key":256,"iv":16,"mode":"CFB1","type":"stream"},"aes-128-ofb":{"cipher":"AES","key":128,"iv":16,"mode":"OFB","type":"stream"},"aes-192-ofb":{"cipher":"AES","key":192,"iv":16,"mode":"OFB","type":"stream"},"aes-256-ofb":{"cipher":"AES","key":256,"iv":16,"mode":"OFB","type":"stream"},"aes-128-ctr":{"cipher":"AES","key":128,"iv":16,"mode":"CTR","type":"stream"},"aes-192-ctr":{"cipher":"AES","key":192,"iv":16,"mode":"CTR","type":"stream"},"aes-256-ctr":{"cipher":"AES","key":256,"iv":16,"mode":"CTR","type":"stream"},"aes-128-gcm":{"cipher":"AES","key":128,"iv":12,"mode":"GCM","type":"auth"},"aes-192-gcm":{"cipher":"AES","key":192,"iv":12,"mode":"GCM","type":"auth"},"aes-256-gcm":{"cipher":"AES","key":256,"iv":12,"mode":"GCM","type":"auth"}}
 
 /***/ }),
-/* 61 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var aes = __webpack_require__(23)
@@ -11848,7 +11957,7 @@ var Transform = __webpack_require__(10)
 var inherits = __webpack_require__(0)
 var GHASH = __webpack_require__(135)
 var xor = __webpack_require__(16)
-var incr32 = __webpack_require__(59)
+var incr32 = __webpack_require__(60)
 
 function xorTest (a, b) {
   var out = 0
@@ -11962,7 +12071,7 @@ module.exports = StreamCipher
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var aes = __webpack_require__(23)
@@ -11995,7 +12104,7 @@ module.exports = StreamCipher
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var randomBytes = __webpack_require__(12);
@@ -12004,7 +12113,7 @@ findPrime.simpleSieve = simpleSieve;
 findPrime.fermatTest = fermatTest;
 var BN = __webpack_require__(3);
 var TWENTYFOUR = new BN(24);
-var MillerRabin = __webpack_require__(64);
+var MillerRabin = __webpack_require__(65);
 var millerRabin = new MillerRabin();
 var ONE = new BN(1);
 var TWO = new BN(2);
@@ -12106,11 +12215,11 @@ function findPrime(bits, gen) {
 
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var bn = __webpack_require__(3);
-var brorand = __webpack_require__(65);
+var brorand = __webpack_require__(66);
 
 function MillerRabin(rand) {
   this.rand = rand || new brorand.Rand();
@@ -12227,7 +12336,7 @@ MillerRabin.prototype.getDivisor = function getDivisor(n, k) {
 
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var r;
@@ -12298,7 +12407,7 @@ if (typeof self === 'object') {
 
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12363,7 +12472,7 @@ utils.encode = function encode(arr, enc) {
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12419,7 +12528,7 @@ exports.g1_256 = g1_256;
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12427,7 +12536,7 @@ exports.g1_256 = g1_256;
 
 var utils = __webpack_require__(8);
 var common = __webpack_require__(17);
-var shaCommon = __webpack_require__(67);
+var shaCommon = __webpack_require__(68);
 var assert = __webpack_require__(6);
 
 var sum32 = utils.sum32;
@@ -12531,7 +12640,7 @@ SHA256.prototype._digest = function digest(enc) {
 
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12868,7 +12977,7 @@ function g1_512_lo(xh, xl) {
 
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var inherits = __webpack_require__(0);
@@ -12990,7 +13099,7 @@ EncoderBuffer.prototype.join = function join(out, offset) {
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var constants = exports;
@@ -13015,7 +13124,7 @@ constants.der = __webpack_require__(179);
 
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var inherits = __webpack_require__(0);
@@ -13345,7 +13454,7 @@ function derDecodeLen(buf, primitive, fail) {
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var inherits = __webpack_require__(0);
@@ -13646,13 +13755,13 @@ function encodeTag(tag, primitive, cls, reporter) {
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports) {
 
 module.exports = {"1.3.132.0.10":"secp256k1","1.3.132.0.33":"p224","1.2.840.10045.3.1.1":"p192","1.2.840.10045.3.1.7":"p256","1.3.132.0.34":"p384","1.3.132.0.35":"p521"}
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {var createHash = __webpack_require__(14);
@@ -13674,7 +13783,7 @@ function i2ops(c) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2).Buffer))
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports) {
 
 module.exports = function xor(a, b) {
@@ -13687,7 +13796,7 @@ module.exports = function xor(a, b) {
 };
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {var bn = __webpack_require__(3);
@@ -13703,15 +13812,15 @@ module.exports = withPublic;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2).Buffer))
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(79);
-module.exports = __webpack_require__(194);
+__webpack_require__(80);
+module.exports = __webpack_require__(197);
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -13720,9 +13829,9 @@ module.exports = __webpack_require__(194);
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(80);
+__webpack_require__(81);
 
-window.Vue = __webpack_require__(100);
+window.Vue = __webpack_require__(101);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -13730,25 +13839,30 @@ window.Vue = __webpack_require__(100);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component("user-menu", __webpack_require__(102));
+Vue.component("user-menu", __webpack_require__(103));
+Vue.component("registration-form", __webpack_require__(194));
 
 var app = new Vue({
   el: "#app"
 });
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // window._ = require("lodash")
 
-/**
- * We'll load the axios HTTP library which allows us to easily issue requests
- * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
- */
+window.Configuration = {
+  csrfToken: document.head.querySelector('meta[name="csrf-token"]').content,
+  stripeToken: document.head.querySelector('meta[name="stripe-token"]').content
 
-window.axios = __webpack_require__(81);
+  /**
+   * We'll load the axios HTTP library which allows us to easily issue requests
+   * to our Laravel back-end. This library automatically handles sending the
+   * CSRF token as a header based on the value of the "XSRF" token cookie.
+   */
+
+};window.axios = __webpack_require__(82);
 window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
 /**
@@ -13757,10 +13871,8 @@ window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
  * a simple convenience so we don't have to attach every token manually.
  */
 
-var token = document.head.querySelector('meta[name="csrf-token"]');
-
-if (token) {
-  window.axios.defaults.headers.common["X-CSRF-TOKEN"] = token.content;
+if (Configuration.csrfToken) {
+  window.axios.defaults.headers.common["X-CSRF-TOKEN"] = Configuration.csrfToken;
 } else {
   console.error("CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token");
 }
@@ -13783,13 +13895,13 @@ if (token) {
 // });
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(82);
+module.exports = __webpack_require__(83);
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13797,7 +13909,7 @@ module.exports = __webpack_require__(82);
 
 var utils = __webpack_require__(5);
 var bind = __webpack_require__(39);
-var Axios = __webpack_require__(84);
+var Axios = __webpack_require__(85);
 var defaults = __webpack_require__(26);
 
 /**
@@ -13832,14 +13944,14 @@ axios.create = function create(instanceConfig) {
 
 // Expose Cancel & CancelToken
 axios.Cancel = __webpack_require__(43);
-axios.CancelToken = __webpack_require__(98);
+axios.CancelToken = __webpack_require__(99);
 axios.isCancel = __webpack_require__(42);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(99);
+axios.spread = __webpack_require__(100);
 
 module.exports = axios;
 
@@ -13848,7 +13960,7 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports) {
 
 /*!
@@ -13875,7 +13987,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13883,8 +13995,8 @@ function isSlowBuffer (obj) {
 
 var defaults = __webpack_require__(26);
 var utils = __webpack_require__(5);
-var InterceptorManager = __webpack_require__(93);
-var dispatchRequest = __webpack_require__(94);
+var InterceptorManager = __webpack_require__(94);
+var dispatchRequest = __webpack_require__(95);
 
 /**
  * Create a new instance of Axios
@@ -13961,7 +14073,7 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13980,7 +14092,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14013,7 +14125,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14041,7 +14153,7 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14116,7 +14228,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14176,7 +14288,7 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14251,7 +14363,7 @@ module.exports = (
 
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14294,7 +14406,7 @@ module.exports = btoa;
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14354,7 +14466,7 @@ module.exports = (
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14413,18 +14525,18 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var utils = __webpack_require__(5);
-var transformData = __webpack_require__(95);
+var transformData = __webpack_require__(96);
 var isCancel = __webpack_require__(42);
 var defaults = __webpack_require__(26);
-var isAbsoluteURL = __webpack_require__(96);
-var combineURLs = __webpack_require__(97);
+var isAbsoluteURL = __webpack_require__(97);
+var combineURLs = __webpack_require__(98);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -14506,7 +14618,7 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14533,7 +14645,7 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14554,7 +14666,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14575,7 +14687,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14639,7 +14751,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14673,7 +14785,7 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25490,7 +25602,7 @@ module.exports = Vue$3;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(44).setImmediate))
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -25683,11 +25795,11 @@ module.exports = Vue$3;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(9)))
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(103)
+var normalizeComponent = __webpack_require__(45)
 /* script */
 var __vue_script__ = __webpack_require__(104)
 /* template */
@@ -25730,115 +25842,6 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 103 */
-/***/ (function(module, exports) {
-
-/* globals __VUE_SSR_CONTEXT__ */
-
-// IMPORTANT: Do NOT use ES2015 features in this file.
-// This module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle.
-
-module.exports = function normalizeComponent (
-  rawScriptExports,
-  compiledTemplate,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier /* server only */
-) {
-  var esModule
-  var scriptExports = rawScriptExports = rawScriptExports || {}
-
-  // ES6 modules interop
-  var type = typeof rawScriptExports.default
-  if (type === 'object' || type === 'function') {
-    esModule = rawScriptExports
-    scriptExports = rawScriptExports.default
-  }
-
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (compiledTemplate) {
-    options.render = compiledTemplate.render
-    options.staticRenderFns = compiledTemplate.staticRenderFns
-    options._compiled = true
-  }
-
-  // functional template
-  if (functionalTemplate) {
-    options.functional = true
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = scopeId
-  }
-
-  var hook
-  if (moduleIdentifier) { // server build
-    hook = function (context) {
-      // 2.3 injection
-      context =
-        context || // cached call
-        (this.$vnode && this.$vnode.ssrContext) || // stateful
-        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
-      // 2.2 with runInNewContext: true
-      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
-        context = __VUE_SSR_CONTEXT__
-      }
-      // inject component styles
-      if (injectStyles) {
-        injectStyles.call(this, context)
-      }
-      // register component module identifier for async chunk inferrence
-      if (context && context._registeredComponents) {
-        context._registeredComponents.add(moduleIdentifier)
-      }
-    }
-    // used by ssr in case component is cached and beforeCreate
-    // never gets called
-    options._ssrRegister = hook
-  } else if (injectStyles) {
-    hook = injectStyles
-  }
-
-  if (hook) {
-    var functional = options.functional
-    var existing = functional
-      ? options.render
-      : options.beforeCreate
-
-    if (!functional) {
-      // inject component registration as beforeCreate hook
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
-    } else {
-      // for template-only hot-reload because in that case the render fn doesn't
-      // go through the normalizer
-      options._injectStyles = hook
-      // register for functioal component in vue file
-      options.render = function renderWithStyleInjection (h, context) {
-        hook.call(context)
-        return existing(h, context)
-      }
-    }
-  }
-
-  return {
-    esModule: esModule,
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
 /* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -25862,11 +25865,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['user'],
+    props: ['user', 'onTrial'],
 
     computed: {
         menuClass: function menuClass() {
@@ -25904,7 +25913,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 exports.randomBytes = exports.rng = exports.pseudoRandomBytes = exports.prng = __webpack_require__(12)
 exports.createHash = exports.Hash = __webpack_require__(14)
-exports.createHmac = exports.Hmac = __webpack_require__(52)
+exports.createHmac = exports.Hmac = __webpack_require__(53)
 
 var algos = __webpack_require__(123)
 var algoKeys = Object.keys(algos)
@@ -25913,7 +25922,7 @@ exports.getHashes = function () {
   return hashes
 }
 
-var p = __webpack_require__(54)
+var p = __webpack_require__(55)
 exports.pbkdf2 = p.pbkdf2
 exports.pbkdf2Sync = p.pbkdf2Sync
 
@@ -26533,7 +26542,7 @@ function config (name) {
 
 module.exports = PassThrough;
 
-var Transform = __webpack_require__(49);
+var Transform = __webpack_require__(50);
 
 /*<replacement>*/
 var util = __webpack_require__(15);
@@ -26798,7 +26807,7 @@ module.exports = Sha1
  */
 
 var inherits = __webpack_require__(0)
-var Sha256 = __webpack_require__(50)
+var Sha256 = __webpack_require__(51)
 var Hash = __webpack_require__(13)
 var Buffer = __webpack_require__(1).Buffer
 
@@ -26849,7 +26858,7 @@ module.exports = Sha224
 /***/ (function(module, exports, __webpack_require__) {
 
 var inherits = __webpack_require__(0)
-var SHA512 = __webpack_require__(51)
+var SHA512 = __webpack_require__(52)
 var Hash = __webpack_require__(13)
 var Buffer = __webpack_require__(1).Buffer
 
@@ -26964,16 +26973,16 @@ module.exports = Hmac
 /* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(53)
+module.exports = __webpack_require__(54)
 
 
 /***/ }),
 /* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global, process) {var checkParameters = __webpack_require__(55)
-var defaultEncoding = __webpack_require__(56)
-var sync = __webpack_require__(57)
+/* WEBPACK VAR INJECTION */(function(global, process) {var checkParameters = __webpack_require__(56)
+var defaultEncoding = __webpack_require__(57)
+var sync = __webpack_require__(58)
 var Buffer = __webpack_require__(1).Buffer
 
 var ZERO_BUF
@@ -27411,9 +27420,9 @@ module.exports = HashBase
 /***/ (function(module, exports, __webpack_require__) {
 
 var MODES = __webpack_require__(35)
-var AuthCipher = __webpack_require__(61)
+var AuthCipher = __webpack_require__(62)
 var Buffer = __webpack_require__(1).Buffer
-var StreamCipher = __webpack_require__(62)
+var StreamCipher = __webpack_require__(63)
 var Transform = __webpack_require__(10)
 var aes = __webpack_require__(23)
 var ebtk = __webpack_require__(22)
@@ -27802,10 +27811,10 @@ module.exports = GHASH
 /* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var AuthCipher = __webpack_require__(61)
+var AuthCipher = __webpack_require__(62)
 var Buffer = __webpack_require__(1).Buffer
 var MODES = __webpack_require__(35)
-var StreamCipher = __webpack_require__(62)
+var StreamCipher = __webpack_require__(63)
 var Transform = __webpack_require__(10)
 var aes = __webpack_require__(23)
 var ebtk = __webpack_require__(22)
@@ -28704,7 +28713,7 @@ exports['des-ede'] = {
 /* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(Buffer) {var generatePrime = __webpack_require__(63)
+/* WEBPACK VAR INJECTION */(function(Buffer) {var generatePrime = __webpack_require__(64)
 var primes = __webpack_require__(148)
 
 var DH = __webpack_require__(149)
@@ -28800,14 +28809,14 @@ module.exports = {"modp1":{"gen":"02","prime":"ffffffffffffffffc90fdaa22168c234c
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {var BN = __webpack_require__(3);
-var MillerRabin = __webpack_require__(64);
+var MillerRabin = __webpack_require__(65);
 var millerRabin = new MillerRabin();
 var TWENTYFOUR = new BN(24);
 var ELEVEN = new BN(11);
 var TEN = new BN(10);
 var THREE = new BN(3);
 var SEVEN = new BN(7);
-var primes = __webpack_require__(63);
+var primes = __webpack_require__(64);
 var randomBytes = __webpack_require__(12);
 module.exports = DH;
 
@@ -28976,7 +28985,7 @@ var inherits = __webpack_require__(0)
 var sign = __webpack_require__(151)
 var verify = __webpack_require__(187)
 
-var algorithms = __webpack_require__(53)
+var algorithms = __webpack_require__(54)
 Object.keys(algorithms).forEach(function (key) {
   algorithms[key].id = new Buffer(algorithms[key].id, 'hex')
   algorithms[key.toLowerCase()] = algorithms[key]
@@ -29069,12 +29078,12 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {// much of this based on https://github.com/indutny/self-signed/blob/gh-pages/lib/rsa.js
-var createHmac = __webpack_require__(52)
+var createHmac = __webpack_require__(53)
 var crt = __webpack_require__(37)
 var EC = __webpack_require__(4).ec
 var BN = __webpack_require__(3)
 var parseKeys = __webpack_require__(25)
-var curves = __webpack_require__(74)
+var curves = __webpack_require__(75)
 
 function sign (hash, key, hashType, signType, tag) {
   var priv = parseKeys(key)
@@ -29232,7 +29241,7 @@ module.exports = {"name":"elliptic","version":"6.4.0","description":"EC cryptogr
 var utils = exports;
 var BN = __webpack_require__(3);
 var minAssert = __webpack_require__(6);
-var minUtils = __webpack_require__(66);
+var minUtils = __webpack_require__(67);
 
 utils.assert = minAssert;
 utils.toArray = minUtils.toArray;
@@ -31524,9 +31533,9 @@ defineCurve('secp256k1', {
 
 exports.sha1 = __webpack_require__(160);
 exports.sha224 = __webpack_require__(161);
-exports.sha256 = __webpack_require__(68);
+exports.sha256 = __webpack_require__(69);
 exports.sha384 = __webpack_require__(162);
-exports.sha512 = __webpack_require__(69);
+exports.sha512 = __webpack_require__(70);
 
 
 /***/ }),
@@ -31538,7 +31547,7 @@ exports.sha512 = __webpack_require__(69);
 
 var utils = __webpack_require__(8);
 var common = __webpack_require__(17);
-var shaCommon = __webpack_require__(67);
+var shaCommon = __webpack_require__(68);
 
 var rotl32 = utils.rotl32;
 var sum32 = utils.sum32;
@@ -31618,7 +31627,7 @@ SHA1.prototype._digest = function digest(enc) {
 
 
 var utils = __webpack_require__(8);
-var SHA256 = __webpack_require__(68);
+var SHA256 = __webpack_require__(69);
 
 function SHA224() {
   if (!(this instanceof SHA224))
@@ -31656,7 +31665,7 @@ SHA224.prototype._digest = function digest(enc) {
 
 var utils = __webpack_require__(8);
 
-var SHA512 = __webpack_require__(69);
+var SHA512 = __webpack_require__(70);
 
 function SHA384() {
   if (!(this instanceof SHA384))
@@ -32937,7 +32946,7 @@ EC.prototype.getKeyRecoveryParam = function(e, signature, Q, enc) {
 
 
 var hash = __webpack_require__(38);
-var utils = __webpack_require__(66);
+var utils = __webpack_require__(67);
 var assert = __webpack_require__(6);
 
 function HmacDRBG(options) {
@@ -34744,7 +34753,7 @@ Node.prototype._isPrintstr = function isPrintstr(str) {
 /* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var constants = __webpack_require__(71);
+var constants = __webpack_require__(72);
 
 exports.tagClass = {
   0: 'universal',
@@ -34794,7 +34803,7 @@ exports.tagByName = constants._reverse(exports.tag);
 
 var decoders = exports;
 
-decoders.der = __webpack_require__(72);
+decoders.der = __webpack_require__(73);
 decoders.pem = __webpack_require__(181);
 
 
@@ -34805,7 +34814,7 @@ decoders.pem = __webpack_require__(181);
 var inherits = __webpack_require__(0);
 var Buffer = __webpack_require__(2).Buffer;
 
-var DERDecoder = __webpack_require__(72);
+var DERDecoder = __webpack_require__(73);
 
 function PEMDecoder(entity) {
   DERDecoder.call(this, entity);
@@ -34859,7 +34868,7 @@ PEMDecoder.prototype.decode = function decode(data, options) {
 
 var encoders = exports;
 
-encoders.der = __webpack_require__(73);
+encoders.der = __webpack_require__(74);
 encoders.pem = __webpack_require__(183);
 
 
@@ -34869,7 +34878,7 @@ encoders.pem = __webpack_require__(183);
 
 var inherits = __webpack_require__(0);
 
-var DEREncoder = __webpack_require__(73);
+var DEREncoder = __webpack_require__(74);
 
 function PEMEncoder(entity) {
   DEREncoder.call(this, entity);
@@ -35036,7 +35045,7 @@ module.exports = function (okey, password) {
 var BN = __webpack_require__(3)
 var EC = __webpack_require__(4).ec
 var parseKeys = __webpack_require__(25)
-var curves = __webpack_require__(74)
+var curves = __webpack_require__(75)
 
 function verify (sig, hash, key, signType, tag) {
   var pub = parseKeys(key)
@@ -35269,10 +35278,10 @@ exports.publicDecrypt = function publicDecrypt(key, buf) {
 /* WEBPACK VAR INJECTION */(function(Buffer) {var parseKeys = __webpack_require__(25);
 var randomBytes = __webpack_require__(12);
 var createHash = __webpack_require__(14);
-var mgf = __webpack_require__(75);
-var xor = __webpack_require__(76);
+var mgf = __webpack_require__(76);
+var xor = __webpack_require__(77);
 var bn = __webpack_require__(3);
-var withPublic = __webpack_require__(77);
+var withPublic = __webpack_require__(78);
 var crt = __webpack_require__(37);
 
 var constants = {
@@ -35368,12 +35377,12 @@ function nonZero(len, crypto) {
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {var parseKeys = __webpack_require__(25);
-var mgf = __webpack_require__(75);
-var xor = __webpack_require__(76);
+var mgf = __webpack_require__(76);
+var xor = __webpack_require__(77);
 var bn = __webpack_require__(3);
 var crt = __webpack_require__(37);
 var createHash = __webpack_require__(14);
-var withPublic = __webpack_require__(77);
+var withPublic = __webpack_require__(78);
 module.exports = function privateDecrypt(private_key, enc, reverse) {
   var padding;
   if (private_key.padding) {
@@ -35608,7 +35617,26 @@ var render = function() {
         attrs: { src: _vm.gravatarUrl(_vm.user) }
       }),
       _vm._v(" "),
-      _c("span", { staticClass: "mx-4" }, [_vm._v(_vm._s(_vm.user.name))]),
+      _c("p", { staticClass: "my-0 mx-4" }, [
+        _c("span", { staticClass: "block" }, [_vm._v(_vm._s(_vm.user.name))]),
+        _vm._v(" "),
+        _c(
+          "span",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.onTrial,
+                expression: "onTrial"
+              }
+            ],
+            staticClass:
+              "inline-block w-auto badge text-white text-center uppercase bg-orange"
+          },
+          [_vm._v("Trial")]
+        )
+      ]),
       _vm._v(" "),
       _c(
         "svg",
@@ -35675,6 +35703,14 @@ var render = function() {
         attrs: { id: "user-menu-dropdown" }
       },
       [
+        _c("a", { staticClass: "action block", attrs: { href: "/profile" } }, [
+          _vm._v("Profile")
+        ]),
+        _vm._v(" "),
+        _c("a", { staticClass: "action block", attrs: { href: "/settings" } }, [
+          _vm._v("Settings")
+        ]),
+        _vm._v(" "),
         _c(
           "a",
           {
@@ -35699,6 +35735,619 @@ if (false) {
 
 /***/ }),
 /* 194 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(45)
+/* script */
+var __vue_script__ = __webpack_require__(195)
+/* template */
+var __vue_template__ = __webpack_require__(196)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/RegistrationForm.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4f85f8d4", Component.options)
+  } else {
+    hotAPI.reload("data-v-4f85f8d4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 195 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['plans', 'errors', 'old', 'action'],
+
+    methods: {
+        triggerStripe: function triggerStripe() {
+            if (this.formData.plan === "none") {
+                this.$el.submit();
+                return;
+            }
+
+            this.stripe.open({
+                email: this.formData.email,
+                description: this.formData.plan.pretty_name,
+                amount: this.formData.plan.price
+            });
+        }
+    },
+
+    data: function data() {
+        return {
+            stripe: null,
+            csrfToken: Configuration.csrfToken,
+            chargingToken: '',
+            formData: {
+                name: this.old.name || '',
+                email: this.old.email || '',
+                password: '',
+                password_confirmation: '',
+                plan: 'none',
+                billing: {
+                    city: '',
+                    country: '',
+                    countryCode: '',
+                    street: '',
+                    zip: ''
+                }
+            }
+        };
+    },
+    created: function created() {
+        var _this = this;
+
+        console.log(this.errors);
+
+        this.stripe = StripeCheckout.configure({
+            key: Configuration.stripeToken,
+            billingAddress: true,
+            locale: 'auto',
+            name: 'Laravel for SaaS',
+            description: 'This is a demo Stripe subscription.',
+            image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+            token: function token(_token, args) {
+                _this.chargingToken = _token.id;
+
+                _this.formData.billing.city = args.billing_address_city;
+                _this.formData.billing.country = args.billing_address_country;
+                _this.formData.billing.countryCode = args.billing_address_country_code;
+                _this.formData.billing.street = args.billing_address_line1;
+                _this.formData.billing.zip = args.billing_address_zip;
+
+                setTimeout(function () {
+                    return _this.$el.submit();
+                }, 250);
+            }
+        });
+    }
+});
+
+/***/ }),
+/* 196 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "form",
+    {
+      staticClass: "w-full max-w-sm rounded shadow-md p-6 mx-auto",
+      attrs: { method: "POST", action: _vm.action }
+    },
+    [
+      _c("div", [
+        _c("label", { staticClass: "form-label", attrs: { for: "name" } }, [
+          _vm._v("Name")
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.formData.name,
+                expression: "formData.name"
+              }
+            ],
+            attrs: {
+              id: "name",
+              type: "text",
+              name: "name",
+              required: "",
+              autofocus: ""
+            },
+            domProps: { value: _vm.formData.name },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.formData, "name", $event.target.value)
+              }
+            }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", { staticClass: "form-label", attrs: { for: "email" } }, [
+          _vm._v("E-Mail Address")
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.formData.email,
+                expression: "formData.email"
+              }
+            ],
+            attrs: { id: "email", type: "email", name: "email", required: "" },
+            domProps: { value: _vm.formData.email },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.formData, "email", $event.target.value)
+              }
+            }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", { staticClass: "form-label", attrs: { for: "password" } }, [
+          _vm._v("Password")
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.formData.password,
+                expression: "formData.password"
+              }
+            ],
+            attrs: {
+              id: "password",
+              type: "password",
+              name: "password",
+              required: ""
+            },
+            domProps: { value: _vm.formData.password },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.formData, "password", $event.target.value)
+              }
+            }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "label",
+          { staticClass: "form-label", attrs: { for: "password-confirm" } },
+          [_vm._v("Confirm Password")]
+        ),
+        _vm._v(" "),
+        _c("div", [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.formData.password_confirmation,
+                expression: "formData.password_confirmation"
+              }
+            ],
+            attrs: {
+              id: "password-confirm",
+              type: "password",
+              name: "password_confirmation",
+              required: ""
+            },
+            domProps: { value: _vm.formData.password_confirmation },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(
+                  _vm.formData,
+                  "password_confirmation",
+                  $event.target.value
+                )
+              }
+            }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("label", { staticClass: "form-label", attrs: { for: "plan" } }, [
+          _vm._v("Select your plan")
+        ]),
+        _vm._v(" "),
+        _c("div", [
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.formData.plan,
+                  expression: "formData.plan"
+                }
+              ],
+              attrs: {
+                id: "plan",
+                type: "password",
+                name: "plan",
+                required: ""
+              },
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.$set(
+                    _vm.formData,
+                    "plan",
+                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                  )
+                }
+              }
+            },
+            [
+              _c("option", { attrs: { value: "none", selected: "" } }, [
+                _vm._v("I want a 7-day free trial")
+              ]),
+              _vm._v(" "),
+              _vm._l(_vm.plans, function(plan) {
+                return _c(
+                  "option",
+                  { key: plan.id, domProps: { value: plan } },
+                  [
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(plan.pretty_name) +
+                        "\n                "
+                    )
+                  ]
+                )
+              })
+            ],
+            2
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "mt-6 flex items-center justify-end" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn",
+            attrs: { type: "submit" },
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                _vm.triggerStripe($event)
+              }
+            }
+          },
+          [
+            _vm._v(
+              "\n            Register " +
+                _vm._s(_vm.formData.plan !== "none" ? "and pay" : "") +
+                "\n        "
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.formData.plan.id,
+            expression: "formData.plan.id"
+          }
+        ],
+        attrs: { type: "hidden", name: "plan" },
+        domProps: { value: _vm.formData.plan.id },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.formData.plan, "id", $event.target.value)
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.chargingToken,
+            expression: "chargingToken"
+          }
+        ],
+        attrs: { type: "hidden", name: "stripe_token" },
+        domProps: { value: _vm.chargingToken },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.chargingToken = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.formData.billing.city,
+            expression: "formData.billing.city"
+          }
+        ],
+        attrs: { type: "hidden", name: "city" },
+        domProps: { value: _vm.formData.billing.city },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.formData.billing, "city", $event.target.value)
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.formData.billing.country,
+            expression: "formData.billing.country"
+          }
+        ],
+        attrs: { type: "hidden", name: "country" },
+        domProps: { value: _vm.formData.billing.country },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.formData.billing, "country", $event.target.value)
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.formData.billing.countryCode,
+            expression: "formData.billing.countryCode"
+          }
+        ],
+        attrs: { type: "hidden", name: "country_code" },
+        domProps: { value: _vm.formData.billing.countryCode },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.formData.billing, "countryCode", $event.target.value)
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.formData.billing.street,
+            expression: "formData.billing.street"
+          }
+        ],
+        attrs: { type: "hidden", name: "street" },
+        domProps: { value: _vm.formData.billing.street },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.formData.billing, "street", $event.target.value)
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.formData.billing.zip,
+            expression: "formData.billing.zip"
+          }
+        ],
+        attrs: { type: "hidden", name: "zip" },
+        domProps: { value: _vm.formData.billing.zip },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.formData.billing, "zip", $event.target.value)
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.csrfToken,
+            expression: "csrfToken"
+          }
+        ],
+        attrs: { type: "hidden", name: "_token" },
+        domProps: { value: _vm.csrfToken },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.csrfToken = $event.target.value
+          }
+        }
+      })
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-4f85f8d4", module.exports)
+  }
+}
+
+/***/ }),
+/* 197 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

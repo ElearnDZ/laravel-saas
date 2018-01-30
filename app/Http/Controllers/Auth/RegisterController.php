@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Address;
+use App\Plan;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -51,6 +53,13 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'plan' => 'nullable|integer',
+            'stripe_token' => 'nullable|string',
+            'city' => 'nullable|string',
+            'zip' => 'nullable|string',
+            'country' => 'nullable|string',
+            'country_code' => 'nullable|string',
+            'stripe_token' => 'nullable|string'
         ]);
     }
 
@@ -62,10 +71,37 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        if ($data['stripe_token']) {
+            $user = User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+            ]);
+
+            $address = new Address([
+                'city' => $data['city'],
+                'street' => $data['street'],
+                'zip' => $data['zip'],
+                'country' => $data['country'],
+                'country_code' => $data['country_code'],
+            ]);
+
+            $plan = Plan::find($data['plan']);
+
+            $user
+                ->newSubscription('main', $plan->name)
+                ->create($data['stripe_token']);
+
+            $user->address()->save($address);
+
+            return $user;
+        } else {
+            return User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => bcrypt($data['password']),
+                'trial_ends_at' => now()->addDays(7),
+            ]);
+        }
     }
 }

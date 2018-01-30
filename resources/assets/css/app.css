@@ -35,8 +35,10 @@
 @import "components/button";
 @import "components/alert";
 @import "components/action";
+@import "components/badge";
 
 @import "utility/center";
+@import "utility/text";
 @import "utility/transition";
 
 /**

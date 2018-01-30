@@ -1,5 +1,10 @@
 // window._ = require("lodash")
 
+window.Configuration = {
+  csrfToken: document.head.querySelector('meta[name="csrf-token"]').content,
+  stripeToken: document.head.querySelector('meta[name="stripe-token"]').content,
+}
+
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
@@ -15,10 +20,8 @@ window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest"
  * a simple convenience so we don't have to attach every token manually.
  */
 
-let token = document.head.querySelector('meta[name="csrf-token"]')
-
-if (token) {
-  window.axios.defaults.headers.common["X-CSRF-TOKEN"] = token.content
+if (Configuration.csrfToken) {
+  window.axios.defaults.headers.common["X-CSRF-TOKEN"] = Configuration.csrfToken
 } else {
   console.error(
     "CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token"

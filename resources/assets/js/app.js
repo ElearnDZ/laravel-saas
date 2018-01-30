@@ -15,6 +15,7 @@ window.Vue = require("vue")
  */
 
 Vue.component("user-menu", require("./components/UserMenu.vue"))
+Vue.component("registration-form", require("./components/RegistrationForm.vue"))
 
 const app = new Vue({
   el: "#app",
