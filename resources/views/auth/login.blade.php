@@ -6,10 +6,10 @@
     <h1>Login to {{ config('app.name') }}</h1>
 </div>
 
-<form class="w-full max-w-sm rounded shadow-md p-6 mx-auto" method="POST" action="{{ route('login') }}">
+<form class="formbox" method="POST" action="{{ route('login') }}">
     {{ csrf_field() }}
 
-    <div class="{{ $errors->has('email') ? 'has-error' : '' }}">
+    <div class="{{ $errors->has('email') ? 'has-error' : '' }} mb-4">
         <label class="form-label" for="email">E-Mail Address</label>
 
         <div>
@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    <div class="{{ $errors->has('password') ? 'has-error' : '' }}">
+    <div class="{{ $errors->has('password') ? 'has-error' : '' }} mb-4">
         <label class="form-label" for="password">Password</label>
 
         <div>

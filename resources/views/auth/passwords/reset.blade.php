@@ -7,15 +7,15 @@
     <h1>Set a new password</h1>
 </div>
 
-<form class="w-full max-w-sm rounded shadow-md p-6 mx-auto" method="POST" action="{{ route('password.request') }}">
+<form class="formbox" method="POST" action="{{ route('password.request') }}">
     {{ csrf_field() }}
 
     <input type="hidden" name="token" value="{{ $token }}">
 
-    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+    <div class="{{ $errors->has('email') ? ' has-error' : '' }} mb-4">
         <label for="email" class="form-label">E-Mail Address</label>
 
-        <div class="col-md-6">
+        <div>
             <input id="email" type="email" name="email" value="{{ $email or old('email') }}" required autofocus>
 
             @if ($errors->has('email'))
@@ -26,10 +26,10 @@
         </div>
     </div>
 
-    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+    <div class="{{ $errors->has('password') ? ' has-error' : '' }} mb-4">
         <label for="password" class="form-label">Password</label>
 
-        <div class="col-md-6">
+        <div>
             <input id="password" type="password" name="password" required>
 
             @if ($errors->has('password'))
@@ -40,9 +40,9 @@
         </div>
     </div>
 
-    <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+    <div class="{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
         <label for="password-confirm" class="form-label">Confirm Password</label>
-        <div class="col-md-6">
+        <div>
             <input id="password-confirm" type="password" name="password_confirmation" required>
 
             @if ($errors->has('password_confirmation'))

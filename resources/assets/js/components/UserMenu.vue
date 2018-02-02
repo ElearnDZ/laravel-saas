@@ -13,8 +13,8 @@
         </div>
 
         <div v-show="open" id="user-menu-dropdown" class="rounded-sm absolute mt-2 shadow w-full border border-grey-light">
-            <a href="/profile" class="action block">Profile</a>
-            <a href="/settings" class="action block">Settings</a>
+            <a href="/settings/profile" class="action block">Profile</a>
+            <a href="/settings/billing" class="action block">Billing</a>
             <a href="/logout" class="action action-danger block">Logout</a>
         </div>
     </div>

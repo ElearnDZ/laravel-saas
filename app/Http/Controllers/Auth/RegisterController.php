@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Auth;
 use App\User;
 use App\Address;
 use App\Plan;
+use App\Mail\EmailConfirmationMail;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
@@ -76,6 +78,7 @@ class RegisterController extends Controller
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'password' => bcrypt($data['password']),
+                'confirmation_hash' => str_random(16),
             ]);
 
             $address = new Address([
@@ -93,15 +96,18 @@ class RegisterController extends Controller
                 ->create($data['stripe_token']);
 
             $user->address()->save($address);
-
-            return $user;
         } else {
-            return User::create([
+            $user = User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'password' => bcrypt($data['password']),
+                'confirmation_hash' => str_random(16),
                 'trial_ends_at' => now()->addDays(7),
             ]);
         }
+
+        \Mail::to($user)->send(new EmailConfirmationMail($user));
+        
+        return $user;
     }
 }

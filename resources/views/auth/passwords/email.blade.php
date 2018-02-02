@@ -12,7 +12,7 @@
     </div>
 @endif
 
-<form class="w-full max-w-sm rounded shadow-md p-6 mx-auto" method="POST" action="{{ route('password.email') }}">
+<form class="formbox" method="POST" action="{{ route('password.email') }}">
     {{ csrf_field() }}
 
     <div class="{{ $errors->has('email') ? ' has-error' : '' }}">

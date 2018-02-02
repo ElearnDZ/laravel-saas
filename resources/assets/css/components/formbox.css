@@ -1,0 +1,3 @@
+.formbox {
+    @apply w-full max-w-sm rounded border border-grey p-6 mx-auto;
+}

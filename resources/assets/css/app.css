@@ -36,6 +36,8 @@
 @import "components/alert";
 @import "components/action";
 @import "components/badge";
+@import "components/formbox";
+
 
 @import "utility/center";
 @import "utility/text";

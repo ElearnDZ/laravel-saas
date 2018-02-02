@@ -664,7 +664,7 @@ button,
   * @import "components/forms";
   */
 
-input,
+input:not([type=radio]):not([type=checkbox]),
 select,
 textarea {
   outline: none;
@@ -681,24 +681,19 @@ textarea {
   background-color: #fff;
 }
 
-input:hover,
+input:not([type=radio]):not([type=checkbox]):hover,
 select:hover,
 textarea:hover {
   border-color: #22292f;
 }
 
-input:focus,
-input:active,
+input:not([type=radio]):not([type=checkbox]):focus,
+input:not([type=radio]):not([type=checkbox]):active,
 select:focus,
 select:active,
 textarea:focus,
 textarea:active {
   border-color: #3490dc;
-}
-
-input[type=checkbox],
-input[type=radio] {
-  width: auto;
 }
 
 label.form-label {
@@ -707,6 +702,10 @@ label.form-label {
   display: block;
   font-size: .875rem;
   font-weight: 700;
+}
+
+label.form-label:first-of-type {
+  margin-top: 0;
 }
 
 label.checkbox-label,
@@ -809,6 +808,17 @@ a:active {
 .badge {
   padding: 2px 4px;
   font-size: 10px;
+}
+
+.formbox {
+  width: 100%;
+  max-width: 30rem;
+  border-radius: .25rem;
+  border-width: 1px;
+  border-color: #b8c2cc;
+  padding: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .center-all {

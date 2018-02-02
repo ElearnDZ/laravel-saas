@@ -1,6 +1,6 @@
 <template>
-    <form class="w-full max-w-sm rounded shadow-md p-6 mx-auto" method="POST" :action="action">
-        <div>
+    <form class="formbox" method="POST" :action="action">
+        <div class="mb-4">
             <label for="name" class="form-label">Name</label>
 
             <div>
@@ -8,7 +8,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="mb-4">
             <label for="email" class="form-label">E-Mail Address</label>
 
             <div>
@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="mb-4">
             <label for="password" class="form-label">Password</label>
 
             <div>
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="mb-4">
             <label for="password-confirm" class="form-label">Confirm Password</label>
 
             <div>
@@ -32,7 +32,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="mb-4">
             <label for="plan" class="form-label">Select your plan</label>
 
             <div>

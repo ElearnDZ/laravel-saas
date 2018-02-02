@@ -35703,13 +35703,17 @@ var render = function() {
         attrs: { id: "user-menu-dropdown" }
       },
       [
-        _c("a", { staticClass: "action block", attrs: { href: "/profile" } }, [
-          _vm._v("Profile")
-        ]),
+        _c(
+          "a",
+          { staticClass: "action block", attrs: { href: "/settings/profile" } },
+          [_vm._v("Profile")]
+        ),
         _vm._v(" "),
-        _c("a", { staticClass: "action block", attrs: { href: "/settings" } }, [
-          _vm._v("Settings")
-        ]),
+        _c(
+          "a",
+          { staticClass: "action block", attrs: { href: "/settings/billing" } },
+          [_vm._v("Billing")]
+        ),
         _vm._v(" "),
         _c(
           "a",
@@ -35935,12 +35939,9 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "form",
-    {
-      staticClass: "w-full max-w-sm rounded shadow-md p-6 mx-auto",
-      attrs: { method: "POST", action: _vm.action }
-    },
+    { staticClass: "formbox", attrs: { method: "POST", action: _vm.action } },
     [
-      _c("div", [
+      _c("div", { staticClass: "mb-4" }, [
         _c("label", { staticClass: "form-label", attrs: { for: "name" } }, [
           _vm._v("Name")
         ]),
@@ -35975,7 +35976,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", [
+      _c("div", { staticClass: "mb-4" }, [
         _c("label", { staticClass: "form-label", attrs: { for: "email" } }, [
           _vm._v("E-Mail Address")
         ]),
@@ -36004,7 +36005,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", [
+      _c("div", { staticClass: "mb-4" }, [
         _c("label", { staticClass: "form-label", attrs: { for: "password" } }, [
           _vm._v("Password")
         ]),
@@ -36038,7 +36039,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", [
+      _c("div", { staticClass: "mb-4" }, [
         _c(
           "label",
           { staticClass: "form-label", attrs: { for: "password-confirm" } },
@@ -36078,7 +36079,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", [
+      _c("div", { staticClass: "mb-4" }, [
         _c("label", { staticClass: "form-label", attrs: { for: "plan" } }, [
           _vm._v("Select your plan")
         ]),
