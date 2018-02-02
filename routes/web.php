@@ -24,9 +24,14 @@ Route::patch('/settings/profile', 'ProfileController@update');
 Route::get('/confirm/resend', 'ProfileController@resendConfirmation')->name('confirm.resend');
 Route::get('/confirm/{confirmation}', 'ProfileController@confirm');
 
-
-Route::get('/settings/billing', 'ProfileController@index')->name('settings.billing');
-Route::patch('/settings/billing', 'ProfileController@update');
+Route::get('/settings/billing', 'BillingController@index')->name('settings.billing');
+Route::patch('/settings/billing', 'BillingController@update');
+Route::get('/settings/billing/invoice/{invoice}', function () {
+    return request()->user()->downloadInvoice(request('invoice'), [
+        'vendor'  => 'pretzelhands',
+        'product' => config('app.name'),
+    ]);
+});
 
 Route::post('/stripe/webhook', '\Laravel\Cashier\Http\Controllers\WebhookController@handleWebhook');
 
