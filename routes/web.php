@@ -26,10 +26,29 @@ Route::get('/confirm/{confirmation}', 'ProfileController@confirm');
 
 Route::get('/settings/billing', 'BillingController@index')->name('settings.billing');
 Route::patch('/settings/billing', 'BillingController@update');
+
+Route::get('/settings/billing/receipt/{receipt}', function () {
+    $invoice = auth()->user()->findInvoiceOrFail(request('receipt'));
+
+    return view('vendor.cashier.receipt', [
+        'invoice' => $invoice,
+        'owner' => auth()->user(),
+        'product' => config('app.name'),
+        'vendor' => config('company.name'),
+        'street' => config('company.street'),
+        'location' => config('company.location'),
+        'country' => config('company.country'),
+    ]);
+});
+
+
 Route::get('/settings/billing/invoice/{invoice}', function () {
     return request()->user()->downloadInvoice(request('invoice'), [
-        'vendor'  => 'pretzelhands',
         'product' => config('app.name'),
+        'vendor' => config('company.name'),
+        'street' => config('company.street'),
+        'location' => config('company.location'),
+        'country' => config('company.country'),
     ]);
 });
 
