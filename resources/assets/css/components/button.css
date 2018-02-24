@@ -1,11 +1,32 @@
 .btn {
-    transition: background-color 0.15s ease-in;
-    @apply px-4 py-2 rounded border border-grey;
+    transition: background-color 0.15s ease-in, color 0.15s ease-in;
+    @apply px-4 py-2 rounded border border-grey text-center cursor-pointer;
 }
 
 .btn:hover,
 .btn:active,
 .btn:focus {
     outline: none;
-    @apply bg-grey;
+    @apply bg-grey no-underline;
+}
+
+.btn-negative {
+    @apply border-red text-red;
+}
+
+.btn-negative:hover,
+.btn-negative:active,
+.btn-negative:focus {
+    @apply bg-red text-white;
+}
+
+
+.btn-positive {
+    @apply border-green text-green;
+}
+
+.btn-positive:hover,
+.btn-positive:active,
+.btn-positive:focus {
+    @apply bg-green text-white;
 }

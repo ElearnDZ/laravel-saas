@@ -10,7 +10,8 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/cashier": "^7.0",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "mpociot/vat-calculator": "^2.2"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

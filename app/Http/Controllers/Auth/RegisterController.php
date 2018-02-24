@@ -54,14 +54,11 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
+            'country_code' => 'required|string|max:255',
+            'vat' => 'nullable|vat_number',
             'password' => 'required|string|min:6|confirmed',
-            'plan' => 'nullable|integer',
+            'plan' => 'nullable|string',
             'stripe_token' => 'nullable|string',
-            'city' => 'nullable|string',
-            'zip' => 'nullable|string',
-            'country' => 'nullable|string',
-            'country_code' => 'nullable|string',
-            'stripe_token' => 'nullable|string'
         ]);
     }
 
@@ -73,37 +70,27 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $user = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
+            'confirmation_hash' => str_random(16),
+            'trial_ends_at' => $data['stripe_token'] ? null : now()->addDays(7),
+        ]);
+
+        // This trick plays a bit dirty, but it works reliably. ¯\_(ツ)_/¯
+        $userCountry = \Locale::getDisplayRegion('-'.$data['country_code'], 'en');
+        $user->address()->create([
+            'country_code' => $data['country_code'],
+            'country' => $userCountry,
+        ]);
+
         if ($data['stripe_token']) {
-            $user = User::create([
-                'name' => $data['name'],
-                'email' => $data['email'],
-                'password' => bcrypt($data['password']),
-                'confirmation_hash' => str_random(16),
-            ]);
+            $plan = Plan::where('name', $data['plan'])->first();
 
-            $address = new Address([
-                'city' => $data['city'],
-                'street' => $data['street'],
-                'zip' => $data['zip'],
-                'country' => $data['country'],
-                'country_code' => $data['country_code'],
-            ]);
+            $user->newSubscription('main', $plan->name)
+                 ->create($data['stripe_token']);
 
-            $plan = Plan::find($data['plan']);
-
-            $user
-                ->newSubscription('main', $plan->name)
-                ->create($data['stripe_token']);
-
-            $user->address()->save($address);
-        } else {
-            $user = User::create([
-                'name' => $data['name'],
-                'email' => $data['email'],
-                'password' => bcrypt($data['password']),
-                'confirmation_hash' => str_random(16),
-                'trial_ends_at' => now()->addDays(7),
-            ]);
         }
 
         \Mail::to($user)->send(new EmailConfirmationMail($user));

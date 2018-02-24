@@ -167,6 +167,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Mpociot\VatCalculator\VatCalculatorServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -225,7 +226,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'VatCalculator' => Mpociot\VatCalculator\Facades\VatCalculator::class
     ],
 
 ];

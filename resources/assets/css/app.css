@@ -37,6 +37,7 @@
 @import "components/action";
 @import "components/badge";
 @import "components/formbox";
+@import "components/tab";
 
 
 @import "utility/center";

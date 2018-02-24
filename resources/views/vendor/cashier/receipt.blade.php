@@ -60,6 +60,8 @@
 <body>
 <div class="container">
 
+    <h1>Invoice for {{ config('app.name') }}</h1>
+
     <table width="100%">
         <tr>
             <td width="49%">

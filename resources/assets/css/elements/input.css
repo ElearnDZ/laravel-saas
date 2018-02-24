@@ -1,4 +1,5 @@
 
+#card-element,
 input:not([type=radio]):not([type=checkbox]),
 select,
 textarea {
@@ -7,12 +8,15 @@ textarea {
   @apply p-2 border border-grey w-full appearance-none rounded-none bg-white;
 }
 
+#card-element:hover,
 input:not([type=radio]):not([type=checkbox]):hover,
 select:hover,
 textarea:hover {
   @apply border-black;
 }
 
+#card-element:focus,
+#card-element:active,
 input:not([type=radio]):not([type=checkbox]):focus,
 input:not([type=radio]):not([type=checkbox]):active,
 select:focus,
@@ -22,20 +26,21 @@ textarea:active {
   @apply border-blue;
 }
 
-label.form-label {
-  @apply mb-1 mt-4 block text-sm font-bold;
+.form-label {
+  @apply mb-1 mt-4 inline-block text-sm font-bold;
 }
 
-label.form-label:first-of-type {
+.form-label:first-of-type {
   @apply mt-0;
 }
 
-label.checkbox-label,
-label.radio-label {
+.checkbox-label,
+.radio-label {
     @apply text-sm;
 }
 
-.has-error input,
+.has-error #card-element,
+.has-error input:not([type=radio]):not([type=checkbox]),
 .has-error select,
 .has-error textarea {
   @apply border-red

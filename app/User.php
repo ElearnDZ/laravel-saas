@@ -5,12 +5,16 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Cashier\Billable;
+use Mpociot\VatCalculator\Traits\BillableWithinTheEU;
 
 use App\Address;
 
 class User extends Authenticatable
 {
-    use Notifiable, Billable;
+    use Notifiable, Billable, BillableWithinTheEU {
+        BillableWithinTheEU::getTaxPercent insteadof Billable;
+        BillableWithinTheEU::taxPercentage insteadof Billable;
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -18,7 +22,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'confirmation_hash', 'trial_ends_at'
+        'name', 'email', 'vat', 'password', 'confirmation_hash', 'trial_ends_at'
     ];
 
     /**
@@ -41,5 +45,9 @@ class User extends Authenticatable
 
     public function address() {
         return $this->hasOne(Address::class);
+    }
+
+    public function isPastTrial() {
+        return now() >= $this->trial_ends_at;
     }
 }

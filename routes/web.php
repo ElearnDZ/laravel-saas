@@ -26,6 +26,9 @@ Route::get('/confirm/{confirmation}', 'ProfileController@confirm');
 
 Route::get('/settings/billing', 'BillingController@index')->name('settings.billing');
 Route::patch('/settings/billing', 'BillingController@update');
+Route::get('/settings/billing/cancel', 'BillingController@destroy')->name('settings.billing.cancel');
+Route::get('/settings/billing/resume', 'BillingController@resume')->name('settings.billing.resume');
+
 
 Route::get('/settings/billing/receipt/{receipt}', function () {
     $invoice = auth()->user()->findInvoiceOrFail(request('receipt'));

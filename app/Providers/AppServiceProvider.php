@@ -14,6 +14,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        if (\App::runningInConsole()) {
+            return;
+        }
+
         view()->share('plans', Plan::all());
     }
 

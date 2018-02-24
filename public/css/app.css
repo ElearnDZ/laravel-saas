@@ -664,6 +664,7 @@ button,
   * @import "components/forms";
   */
 
+#card-element,
 input:not([type=radio]):not([type=checkbox]),
 select,
 textarea {
@@ -681,12 +682,15 @@ textarea {
   background-color: #fff;
 }
 
+#card-element:hover,
 input:not([type=radio]):not([type=checkbox]):hover,
 select:hover,
 textarea:hover {
   border-color: #22292f;
 }
 
+#card-element:focus,
+#card-element:active,
 input:not([type=radio]):not([type=checkbox]):focus,
 input:not([type=radio]):not([type=checkbox]):active,
 select:focus,
@@ -696,24 +700,25 @@ textarea:active {
   border-color: #3490dc;
 }
 
-label.form-label {
+.form-label {
   margin-bottom: .25rem;
   margin-top: 1rem;
-  display: block;
+  display: inline-block;
   font-size: .875rem;
   font-weight: 700;
 }
 
-label.form-label:first-of-type {
+.form-label:first-of-type {
   margin-top: 0;
 }
 
-label.checkbox-label,
-label.radio-label {
+.checkbox-label,
+.radio-label {
   font-size: .875rem;
 }
 
-.has-error input,
+.has-error #card-element,
+.has-error input:not([type=radio]):not([type=checkbox]),
 .has-error select,
 .has-error textarea {
   border-color: #e3342f;
@@ -735,8 +740,8 @@ a:active {
 }
 
 .btn {
-  -webkit-transition: background-color .15s ease-in;
-  transition: background-color .15s ease-in;
+  -webkit-transition: background-color .15s ease-in, color .15s ease-in;
+  transition: background-color .15s ease-in, color .15s ease-in;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: .5rem;
@@ -744,6 +749,8 @@ a:active {
   border-radius: .25rem;
   border-width: 1px;
   border-color: #b8c2cc;
+  text-align: center;
+  cursor: pointer;
 }
 
 .btn:hover,
@@ -751,6 +758,31 @@ a:active {
 .btn:focus {
   outline: none;
   background-color: #b8c2cc;
+  text-decoration: none;
+}
+
+.btn-negative {
+  border-color: #e3342f;
+  color: #e3342f;
+}
+
+.btn-negative:hover,
+.btn-negative:active,
+.btn-negative:focus {
+  background-color: #e3342f;
+  color: #fff;
+}
+
+.btn-positive {
+  border-color: #38c172;
+  color: #38c172;
+}
+
+.btn-positive:hover,
+.btn-positive:active,
+.btn-positive:focus {
+  background-color: #38c172;
+  color: #fff;
 }
 
 .alert {
@@ -813,12 +845,46 @@ a:active {
 .formbox {
   width: 100%;
   max-width: 30rem;
-  border-radius: .25rem;
   border-width: 1px;
   border-color: #b8c2cc;
   padding: 1.5rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.tab {
+  -webkit-transition: background-color .15s ease-in, color .15s ease-in;
+  transition: background-color .15s ease-in, color .15s ease-in;
+  background-color: #fff;
+  display: inline-block;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: #3490dc;
+  cursor: pointer;
+}
+
+.tab:not(.tab-active):hover,
+.tab:not(.tab-active):active,
+.tab:not(.tab-active):focus {
+  color: #1c3d5a;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  background-color: #dae1e7;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.tab-active {
+  border-color: #b8c2cc;
+  border-left-width: 1px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  color: #1c3d5a;
+  font-weight: 700;
 }
 
 .center-all {

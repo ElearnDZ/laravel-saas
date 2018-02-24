@@ -1,0 +1,14 @@
+.tab {
+    transition: background-color 0.15s ease-in, color 0.15s ease-in;
+    @apply bg-white inline-block py-2 px-4 text-blue cursor-pointer;
+}
+
+.tab:not(.tab-active):hover,
+.tab:not(.tab-active):active,
+.tab:not(.tab-active):focus {
+    @apply text-blue-darker rounded-t bg-grey-light cursor-pointer no-underline;
+}
+
+.tab-active {
+    @apply border-grey border-l border-t border-r rounded-t text-blue-darker font-bold
+}

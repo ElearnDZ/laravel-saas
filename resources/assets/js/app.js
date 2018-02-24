@@ -16,7 +16,8 @@ window.Vue = require("vue")
 
 Vue.component("user-menu", require("./components/UserMenu.vue"))
 Vue.component("registration-form", require("./components/RegistrationForm.vue"))
+Vue.component("billing-form", require('./components/BillingForm.vue'))
+Vue.component("country-list", require('./components/CountryList.vue'))
 
-const app = new Vue({
-  el: "#app",
-})
+
+const app = new Vue({el: "#app"})

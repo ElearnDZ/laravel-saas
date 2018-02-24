@@ -11,6 +11,6 @@
     :errors="{{ $errors }}"
     :old="{{ json_encode(session()->getOldInput()) }}"
     action="{{ route('register') }}"
-></registration-form>
+/></registration-form>
 
 @endsection
